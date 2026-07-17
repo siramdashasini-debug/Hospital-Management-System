@@ -16,8 +16,8 @@ quantity=int(input("enter quantity of your item:"))
 
 if item in store:
     print(f"DEBUG:Found '{item}'.its data contains these keys: {list(store[item].keys())}")
-    if quantity<=store[item]['stock']:
-        store[item]['stock']-=quantity
+    if quantity<=store[item]['quantity']:
+        store[item]['quantity']-=quantity
         print(f"purchased {quantity} {item}(s)!")
     else:
         print("not enough stock")
